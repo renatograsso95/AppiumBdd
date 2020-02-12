@@ -12,7 +12,7 @@ public class DriverFactory {
 	private WebDriver driver;
 	
 	@SuppressWarnings({ "rawtypes" })
-	public WebDriver iniciaApp() throws Exception {
+	public WebDriver initDriver() throws Exception {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("deviceName", "Android Emulator");
 		capabilities.setCapability("appPackage", "com.Advantage.aShopping");

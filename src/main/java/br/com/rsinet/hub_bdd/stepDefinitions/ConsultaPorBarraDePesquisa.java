@@ -7,7 +7,6 @@ import org.testng.Assert;
 import br.com.rsinet.hub_bdd.excel.Constant;
 import br.com.rsinet.hub_bdd.excel.ExcelUtils;
 import br.com.rsinet.hub_bdd.excel.takeData;
-import br.com.rsinet.hub_bdd.manager.DriverFactory;
 import br.com.rsinet.hub_bdd.manager.ScreenObjectManager;
 import br.com.rsinet.hub_bdd.screenObject.HomeScreen;
 import br.com.rsinet.hub_bdd.screenObject.PesquisaScreen;
@@ -27,7 +26,7 @@ public class ConsultaPorBarraDePesquisa {
 	
 	public ConsultaPorBarraDePesquisa(TestContext context) throws Exception {
 		testContext = context;
-		driver = testContext.getDriverFactory().iniciaApp();
+		driver = testContext.getDriverFactory().initDriver();
 	}
 	
 	

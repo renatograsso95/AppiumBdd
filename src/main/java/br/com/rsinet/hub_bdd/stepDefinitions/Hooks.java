@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.cucumber.listener.Reporter;
 
-import br.com.rsinet.hub_bdd.extendReport.Prints;
+import br.com.rsinet.hub_bdd.extentReport.Prints;
 import br.com.rsinet.hub_bdd.manager.TestContext;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -25,7 +25,7 @@ public class Hooks {
 	
 	@Before
 	public void iniciaApp() throws Exception {
-		driver = testContext.getDriverFactory().iniciaApp();
+		driver = testContext.getDriverFactory().initDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
@@ -36,7 +36,7 @@ public class Hooks {
 	
 	@After(order = 1)
 	public void ExtendReport(Scenario scenario) throws Exception {
-		String caminho = Prints.getScreens(testContext.getDriverFactory().iniciaApp(), scenario.getName());
+		String caminho = Prints.getScreens(testContext.getDriverFactory().initDriver(), scenario.getName());
 		Reporter.addScreenCaptureFromPath(caminho);
 	}
 	

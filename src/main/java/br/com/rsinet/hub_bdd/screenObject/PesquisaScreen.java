@@ -94,4 +94,3 @@ public class PesquisaScreen {
 		return encontraQuantidadeDeCompra;
 	}
 }
-

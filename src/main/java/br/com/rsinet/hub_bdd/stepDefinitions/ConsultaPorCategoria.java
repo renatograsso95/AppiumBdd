@@ -1,7 +1,6 @@
 package br.com.rsinet.hub_bdd.stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
@@ -27,7 +26,7 @@ public class ConsultaPorCategoria {
 	
 	public ConsultaPorCategoria(TestContext context) throws Exception {
 		testContext = context;
-		driver = testContext.getDriverFactory().iniciaApp();
+		driver = testContext.getDriverFactory().initDriver();
 	}
 	
 	@Dado("^que o usuario tenha entrado no app e efetue o login$")
@@ -44,17 +43,16 @@ public class ConsultaPorCategoria {
 		
 		homeScreen.clicaLogin();
 		
-		homeScreen.preencheUserLogin(takeData.UserName());
-		homeScreen.preenchePasswordLogin(takeData.Password());
+		homeScreen.preencheUser(takeData.UserName());
+		homeScreen.preenchePass(takeData.Password());
 		
 		homeScreen.clicaBtLogin();
 		
-//		homeScreen.clicaNoBt();
 	}
 
 	@Quando("^ele selecionar a categoria do produto desejado$")
 	public void ele_selecionar_a_categoria_do_produto_desejado() throws Throwable {
-		homeScreen.clicaCategoriaSpeakers();
+		homeScreen.clickSpeaker();
 	}
 
 	@Quando("^clicar no produto desejado$")

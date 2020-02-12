@@ -26,7 +26,7 @@ public class Cadastrar {
 	
 	public Cadastrar(TestContext context) throws Exception {
 		testContext = context;
-		driver = testContext.getDriverFactory().iniciaApp();
+		driver = testContext.getDriverFactory().initDriver();
 	}
 	
 	@Dado("^que o usuario tenha entrado no app e clicado na opcao de menu$")

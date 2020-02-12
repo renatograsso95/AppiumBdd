@@ -76,16 +76,16 @@ public class HomeScreen {
 		btLupa.click();
 	}
 	
-	public void clicaCategoriaSpeakers() {
+	public void clickSpeaker() {
 		speaker.click();
 	}
 	
-	public void preencheUserLogin(String et_UserLogin) {
+	public void preencheUser(String et_UserLogin) {
 		userLogin.click();
 		userLogin.sendKeys(et_UserLogin);
 	}
 	
-	public void preenchePasswordLogin(String et_PasswordLogin) {
+	public void preenchePass(String et_PasswordLogin) {
 		userPass.click();
 		userPass.sendKeys(et_PasswordLogin);
 	}
